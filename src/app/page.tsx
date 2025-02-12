@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Link href='mocha-desktop://teste'>go to mocha</Link>
     </main>
   );
 }
