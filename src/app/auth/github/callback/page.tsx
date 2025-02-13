@@ -34,13 +34,5 @@ export default async function GithubAuthCallback({
 
   const response = await authenticateUser(data.code)
 
-  if (response.token) {
-    redirect(`mocha-desktop://auth?token=${response.token}`)
-  }
-
-  return (
-    <div>
-      <span>github callback</span>
-    </div>
-  )
+  return redirect(`mocha-desktop://auth?token=${response.token}`)
 }
